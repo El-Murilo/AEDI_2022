@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+void Retangulo(int a, int b);
+
+int main(){
+	setlocale(LC_ALL, "");
+	int lado1, lado2;
+	
+	printf("Digite os valores do lado 1 e lado 2: ");
+	scanf("%i%i",&lado1, &lado2);
+	printf("\nMatriz:\n");
+	Retangulo(lado1, lado2);	
+	
+	return 0;
+}
+void Retangulo(int a, int b){
+	int i, j;
+	for(i =0; i < a; i++){
+		for(j = 0; j < b; j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+}
