@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#define nu 5
+
+int main(){
+	setlocale(LC_ALL, "");
+	int i, num[nu];
+
+	printf("Digite %i numeros de 1 a 30\n",nu);
+	for(i = 0; i < nu; i++){
+		printf("Digite o %i numero: ",i + 1);
+		scanf("%i", &num[i]);
+
+		while(num[i] < 1 || num[i] > 30){
+			printf("Invalido! Digite novamente: ");
+			scanf("%i", &num[i]);
+		}
+	}
+	
+	int j;
+	for(i = 0; i < nu; i++){
+		printf("\n%i numero:",i + 1);
+		j = 1;
+
+		do{
+			printf("*");
+			j++;
+		}while( j <= num[i] );
+	printf("\n");
+	}	
+	
+	return 0;
+}
